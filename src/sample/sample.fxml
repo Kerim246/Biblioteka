@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" >
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="135.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="261.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="203.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Izaberite knjigu:">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Label text="Autor: " GridPane.rowIndex="1">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Label text="Naslov:" GridPane.rowIndex="2">
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Label text="ISBN:" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <ChoiceBox fx:id="choiceKnjige" onAction="#promjenaKnjige" prefWidth="139.0" GridPane.columnIndex="1" />
+      <TextField fx:id="fldAutor" prefHeight="24.0" prefWidth="275.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="fldNaslov" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="fldIsbn" prefWidth="292.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#btnIspisi" text="Ispisi" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   </children>
+</GridPane>
